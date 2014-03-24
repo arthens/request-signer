@@ -15,14 +15,17 @@ You can also download `request-signer` directly, as it doesn't have any dependen
 ## Usage
 
 ```php
+// Use composer or import the class manually
+require 'vendor/autoload.php';
+
 // Create a new Signer
-$signer = new \Arthens\RequesSigner\Signer('here-your-secret-key');
+$signer = new \Arthens\RequestSigner\Signer('here-your-secret-key');
 
 // Generate a new url-friendly signature
 $signature = $signer->sign('GET', '/news');
 
 // Verify a signature
 if (!$signer->verify('here-the-signature-from-request', 'GET', '/news')) {
-    throw new \Exception('Invalid signature);
+    throw new \Exception('Invalid signature');
 }
 ```
