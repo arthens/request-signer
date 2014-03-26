@@ -29,3 +29,7 @@ if (!$signer->verify('here-the-signature-from-request', 'GET', '/news')) {
     throw new \Exception('Invalid signature');
 }
 ```
+
+## Handlers
+
+Handlers for Symfony, Guzzle,...?
